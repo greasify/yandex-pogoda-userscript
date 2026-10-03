@@ -14,7 +14,7 @@ export default defineConfig({
       fileName: 'yandex-pogoda',
       autoMetaUrls: true,
       header: {
-        name: 'Яндекс.Погода: дождь на карте',
+        name: 'Яндекс Погода: Идёт дождь?',
         version: pkg.version,
         description: pkg.description,
         icon: 'greasify.svg',
