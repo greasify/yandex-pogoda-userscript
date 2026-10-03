@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Яндекс.Погода: дождь на карте
+// @name        Яндекс Погода: Идёт дождь?
 // @version     0.1.0
 // @description Каждые 10 минут скрипт смотрит ячейку карты осадков под пином и нажимает «Да» или «Нет».
 // @icon        https://greasify.github.io/yandex-pogoda-userscript/greasify.svg
