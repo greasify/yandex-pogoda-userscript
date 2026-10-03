@@ -1,7 +1,16 @@
-# Vite Userscript template
+# Яндекс.Погода: дождь на карте
 
-> This template is based on [Vite](https://vitejs.dev) and [vite-userscript-plugin](https://github.com/greasify/vite-userscript-plugin)
+Каждые 10 минут скрипт смотрит ячейку карты осадков под пином и нажимает «Да» или «Нет» в виджете «Идёт дождь?». Ответ берётся с радара, а не из прогноза по городу.
 
-## Install Userscript
+Страница: `https://yandex.ru/pogoda/*/maps/nowcast*`. Координаты пина читаются из `lat` и `lon` в адресе. Один ответ на пару «шаг карты + координаты», чтобы перезагрузка не нажала кнопку дважды. Смена точки без полной перезагрузки запускает проверку заново. Таймеры идут через [worker-timers](https://www.npmjs.com/package/worker-timers), чтобы фоновая вкладка не откладывала перезагрузку.
 
-> [vite-userscript-template.user.js](https://greasify.github.io/vite-userscript-template/vite-userscript-template.user.js)
+## Установка
+
+> [yandex-pogoda.user.js](https://greasify.github.io/yandex-pogoda-userscript/yandex-pogoda.user.js)
+
+## Разработка
+
+```sh
+pnpm install
+pnpm dev
+```
