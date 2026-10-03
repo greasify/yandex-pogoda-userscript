@@ -1,8 +1,40 @@
-.basic-userscript {
-  border-top: 1px solid black;
+.rain-check {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2147483646;
+  margin: 0;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 28%);
+  border-radius: 14px;
+  background: rgb(20 24 33 / 92%);
+  padding: 12px 14px;
+  width: max-content;
+  max-width: 280px;
+  pointer-events: none;
+  color: #fff;
+  font:
+    14px/1.35 system-ui,
+    sans-serif;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    opacity: 0.82;
+    margin-top: 4px;
+    font-size: 12px;
+  }
 }
 
-.actions {
-  display: flex;
-  gap: 8px;
+.rain-check_yes {
+  outline: 2px solid #3d8bfd;
+}
+
+.rain-check_no {
+  outline: 2px solid #3dbe7a;
+}
+
+.rain-check_error {
+  outline: 2px solid #f0a202;
 }

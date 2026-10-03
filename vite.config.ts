@@ -11,14 +11,19 @@ export default defineConfig({
   plugins: [
     userscript({
       entry: 'src/index.ts',
+      fileName: 'yandex-pogoda',
       autoMetaUrls: true,
       header: {
-        name: pkg.name,
+        name: 'Яндекс.Погода: дождь на карте',
         version: pkg.version,
         description: pkg.description,
         icon: 'greasify.svg',
-        homepage: 'https://greasify.github.io/vite-userscript-template/',
-        match: 'https://example.com/',
+        homepage: 'https://greasify.github.io/yandex-pogoda-userscript/',
+        match: 'https://yandex.ru/pogoda/*/maps/nowcast*',
+        grant: 'none',
+      },
+      server: {
+        file: true,
       },
     }),
   ],

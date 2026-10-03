@@ -1,10 +1,10 @@
 {
-  "name": "vite-userscript-template",
+  "name": "yandex-pogoda-userscript",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@11.25.0",
-  "description": "Ship a userscript like a Vite app — local HMR and a single .user.js for Tampermonkey, Greasemonkey and Violentmonkey.",
+  "description": "Каждые 10 минут проверяет ячейку карты осадков и отвечает «Да» или «Нет».",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,14 +12,17 @@
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --fix --cache"
   },
+  "dependencies": {
+    "worker-timers": "8.0.34"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "9.5.1",
     "eslint": "9.39.5",
     "eslint-plugin-format": "2.0.1",
     "prettier-plugin-css-order": "2.2.0",
-    "sass-embedded": "1.104.1",
+    "sass-embedded": "1.105.1",
     "typescript": "6.0.3",
-    "vite": "8.2.2",
+    "vite": "8.3.2",
     "vite-userscript-plugin": "2.5.0"
   }
 }
